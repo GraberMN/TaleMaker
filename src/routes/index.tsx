@@ -6,7 +6,7 @@ export const Route = createFileRoute('/')({
 
 function App() {
   return (
-    <div style={{ textAlign: 'center', backgroundColor: 'lightgrey' }}>
+    <div style={{ textAlign: 'center', backgroundColor: 'lightgrey', margin: 'auto' }}>
       
     </div>
   )
