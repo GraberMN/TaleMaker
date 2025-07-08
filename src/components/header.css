@@ -1,0 +1,16 @@
+#headerHeader {
+    background: white;
+    color: black;
+    display: flex;
+    padding: 8px;
+    justify-content: space-between;
+}
+#headerNav {
+    display: flex;
+    flex-direction: row;
+}
+#headerDiv {
+    font-weight: bold;
+    padding-left: 8px;
+    padding-right: 8px;
+}
