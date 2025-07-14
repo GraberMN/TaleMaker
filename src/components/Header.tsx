@@ -6,7 +6,8 @@ export default function Header() {
     <header id='headerHeader'>
       <nav id='headerNav'>
         <div id='headerDiv'>
-          <Link to="/">Home</Link>
+          <Link to="/" id='homeLink'>Home</Link>
+          <Link to="/generate-your-tale/genre" id='generateYourTaleLink'>Generate Your Tale</Link>
         </div>
       </nav>
     </header>

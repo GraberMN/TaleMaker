@@ -9,38 +9,115 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TestRouteImport } from './routes/test'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as GenerateYourTaleSettingRouteImport } from './routes/generate-your-tale/setting'
+import { Route as GenerateYourTaleLessonRouteImport } from './routes/generate-your-tale/lesson'
+import { Route as GenerateYourTaleGenreRouteImport } from './routes/generate-your-tale/genre'
+import { Route as GenerateYourTaleCharactersRouteImport } from './routes/generate-your-tale/characters'
 
+const TestRoute = TestRouteImport.update({
+  id: '/test',
+  path: '/test',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GenerateYourTaleSettingRoute = GenerateYourTaleSettingRouteImport.update({
+  id: '/generate-your-tale/setting',
+  path: '/generate-your-tale/setting',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GenerateYourTaleLessonRoute = GenerateYourTaleLessonRouteImport.update({
+  id: '/generate-your-tale/lesson',
+  path: '/generate-your-tale/lesson',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GenerateYourTaleGenreRoute = GenerateYourTaleGenreRouteImport.update({
+  id: '/generate-your-tale/genre',
+  path: '/generate-your-tale/genre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GenerateYourTaleCharactersRoute =
+  GenerateYourTaleCharactersRouteImport.update({
+    id: '/generate-your-tale/characters',
+    path: '/generate-your-tale/characters',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/test': typeof TestRoute
+  '/generate-your-tale/characters': typeof GenerateYourTaleCharactersRoute
+  '/generate-your-tale/genre': typeof GenerateYourTaleGenreRoute
+  '/generate-your-tale/lesson': typeof GenerateYourTaleLessonRoute
+  '/generate-your-tale/setting': typeof GenerateYourTaleSettingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/test': typeof TestRoute
+  '/generate-your-tale/characters': typeof GenerateYourTaleCharactersRoute
+  '/generate-your-tale/genre': typeof GenerateYourTaleGenreRoute
+  '/generate-your-tale/lesson': typeof GenerateYourTaleLessonRoute
+  '/generate-your-tale/setting': typeof GenerateYourTaleSettingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/test': typeof TestRoute
+  '/generate-your-tale/characters': typeof GenerateYourTaleCharactersRoute
+  '/generate-your-tale/genre': typeof GenerateYourTaleGenreRoute
+  '/generate-your-tale/lesson': typeof GenerateYourTaleLessonRoute
+  '/generate-your-tale/setting': typeof GenerateYourTaleSettingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/test'
+    | '/generate-your-tale/characters'
+    | '/generate-your-tale/genre'
+    | '/generate-your-tale/lesson'
+    | '/generate-your-tale/setting'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/test'
+    | '/generate-your-tale/characters'
+    | '/generate-your-tale/genre'
+    | '/generate-your-tale/lesson'
+    | '/generate-your-tale/setting'
+  id:
+    | '__root__'
+    | '/'
+    | '/test'
+    | '/generate-your-tale/characters'
+    | '/generate-your-tale/genre'
+    | '/generate-your-tale/lesson'
+    | '/generate-your-tale/setting'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  TestRoute: typeof TestRoute
+  GenerateYourTaleCharactersRoute: typeof GenerateYourTaleCharactersRoute
+  GenerateYourTaleGenreRoute: typeof GenerateYourTaleGenreRoute
+  GenerateYourTaleLessonRoute: typeof GenerateYourTaleLessonRoute
+  GenerateYourTaleSettingRoute: typeof GenerateYourTaleSettingRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/test': {
+      id: '/test'
+      path: '/test'
+      fullPath: '/test'
+      preLoaderRoute: typeof TestRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +125,44 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/generate-your-tale/setting': {
+      id: '/generate-your-tale/setting'
+      path: '/generate-your-tale/setting'
+      fullPath: '/generate-your-tale/setting'
+      preLoaderRoute: typeof GenerateYourTaleSettingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/generate-your-tale/lesson': {
+      id: '/generate-your-tale/lesson'
+      path: '/generate-your-tale/lesson'
+      fullPath: '/generate-your-tale/lesson'
+      preLoaderRoute: typeof GenerateYourTaleLessonRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/generate-your-tale/genre': {
+      id: '/generate-your-tale/genre'
+      path: '/generate-your-tale/genre'
+      fullPath: '/generate-your-tale/genre'
+      preLoaderRoute: typeof GenerateYourTaleGenreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/generate-your-tale/characters': {
+      id: '/generate-your-tale/characters'
+      path: '/generate-your-tale/characters'
+      fullPath: '/generate-your-tale/characters'
+      preLoaderRoute: typeof GenerateYourTaleCharactersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  TestRoute: TestRoute,
+  GenerateYourTaleCharactersRoute: GenerateYourTaleCharactersRoute,
+  GenerateYourTaleGenreRoute: GenerateYourTaleGenreRoute,
+  GenerateYourTaleLessonRoute: GenerateYourTaleLessonRoute,
+  GenerateYourTaleSettingRoute: GenerateYourTaleSettingRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
