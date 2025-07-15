@@ -8,7 +8,9 @@ export default function Header() {
         <div id='headerDiv'>
           <Link to="/" id='homeLink'>Home</Link>
           <Link to="/generate-your-tale/genre" id='generateYourTaleLink'>Generate Your Tale</Link>
+          <Link to="/about-us">About Us</Link>
         </div>
+        <Link to="/" id='homeLink2'>TaleMaker</Link>
       </nav>
     </header>
   )

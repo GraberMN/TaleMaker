@@ -1,7 +1,11 @@
 #headerHeader {
+    position: fixed;
     background: white;
     color: black;
-    padding: 8px;
+    padding: 16px;
+    width: 100vw;
+    min-width: 800px;
+    z-index: 999;
 }
 #headerNav {
     display: flex;
@@ -14,4 +18,26 @@
 }
 #homeLink {
     padding-right: 40px;
+}
+#generateYourTaleLink {
+    padding-right: 40px;
+}
+#homeLink2 {
+    position: absolute;
+    font-weight: bold;
+    transform: translateX(46vw);
+    font-size: 25px;
+    margin-top: -8px;
+    z-index: 998;
+}
+@media(max-width: 800px) {
+    #homeLink2 {
+        transform: translateX(368px);
+    }
+    #homeLink {
+        padding-right: 35px;
+    }
+    #generateYourTaleLink {
+        padding-right: 35px;
+    }
 }

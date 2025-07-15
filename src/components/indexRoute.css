@@ -2,7 +2,32 @@
     text-align: center;
     background-color: lightgrey;
     margin: auto;
-    height: calc(100vh - 46px);
     min-height: 900px;
     min-width: 800px;
+}
+#hook {
+    position: relative;
+    font-family: cursive;
+    font-size: 50px;
+    padding-top: 100px;
+    max-width: 1300px;
+    margin: auto;
+}
+#genreExamples {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+.genreExampleImage {
+    width: 200px;
+    height: 325px;
+    background-color: white;
+    margin: 20px;
+    border: solid;
+    margin-bottom: 15px;
+}
+.genreExampleCaption {
+    font-weight: bold;
+    font-size: 20px;
 }

@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TestRouteImport } from './routes/test'
+import { Route as AboutUsRouteImport } from './routes/about-us'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as GenerateYourTaleSettingRouteImport } from './routes/generate-your-tale/setting'
 import { Route as GenerateYourTaleLessonRouteImport } from './routes/generate-your-tale/lesson'
@@ -19,6 +20,11 @@ import { Route as GenerateYourTaleCharactersRouteImport } from './routes/generat
 const TestRoute = TestRouteImport.update({
   id: '/test',
   path: '/test',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutUsRoute = AboutUsRouteImport.update({
+  id: '/about-us',
+  path: '/about-us',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -50,6 +56,7 @@ const GenerateYourTaleCharactersRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about-us': typeof AboutUsRoute
   '/test': typeof TestRoute
   '/generate-your-tale/characters': typeof GenerateYourTaleCharactersRoute
   '/generate-your-tale/genre': typeof GenerateYourTaleGenreRoute
@@ -58,6 +65,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about-us': typeof AboutUsRoute
   '/test': typeof TestRoute
   '/generate-your-tale/characters': typeof GenerateYourTaleCharactersRoute
   '/generate-your-tale/genre': typeof GenerateYourTaleGenreRoute
@@ -67,6 +75,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about-us': typeof AboutUsRoute
   '/test': typeof TestRoute
   '/generate-your-tale/characters': typeof GenerateYourTaleCharactersRoute
   '/generate-your-tale/genre': typeof GenerateYourTaleGenreRoute
@@ -77,6 +86,7 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about-us'
     | '/test'
     | '/generate-your-tale/characters'
     | '/generate-your-tale/genre'
@@ -85,6 +95,7 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about-us'
     | '/test'
     | '/generate-your-tale/characters'
     | '/generate-your-tale/genre'
@@ -93,6 +104,7 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about-us'
     | '/test'
     | '/generate-your-tale/characters'
     | '/generate-your-tale/genre'
@@ -102,6 +114,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutUsRoute: typeof AboutUsRoute
   TestRoute: typeof TestRoute
   GenerateYourTaleCharactersRoute: typeof GenerateYourTaleCharactersRoute
   GenerateYourTaleGenreRoute: typeof GenerateYourTaleGenreRoute
@@ -116,6 +129,13 @@ declare module '@tanstack/react-router' {
       path: '/test'
       fullPath: '/test'
       preLoaderRoute: typeof TestRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about-us': {
+      id: '/about-us'
+      path: '/about-us'
+      fullPath: '/about-us'
+      preLoaderRoute: typeof AboutUsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -158,6 +178,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutUsRoute: AboutUsRoute,
   TestRoute: TestRoute,
   GenerateYourTaleCharactersRoute: GenerateYourTaleCharactersRoute,
   GenerateYourTaleGenreRoute: GenerateYourTaleGenreRoute,
