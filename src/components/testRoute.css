@@ -1,10 +1,10 @@
-#appBody {
+#testBody {
     text-align: center;
     background-color: lightgrey;
     margin: auto;
-    height: calc(100vh - 46px);
-    min-height: 900px;
+    min-height: 946px;
     min-width: 800px;
+    padding-top: 50px;
 }
 h1 {
     padding-top: 15px;

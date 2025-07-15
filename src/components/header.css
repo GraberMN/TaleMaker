@@ -17,10 +17,10 @@
     padding-right: 8px;
 }
 #homeLink {
-    padding-right: 40px;
+    margin-right: 40px;
 }
 #generateYourTaleLink {
-    padding-right: 40px;
+    margin-right: 40px;
 }
 #homeLink2 {
     position: absolute;
@@ -35,9 +35,9 @@
         transform: translateX(368px);
     }
     #homeLink {
-        padding-right: 35px;
+        margin-right: 35px;
     }
     #generateYourTaleLink {
-        padding-right: 35px;
+        margin-right: 35px;
     }
 }

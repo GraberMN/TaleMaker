@@ -34,7 +34,7 @@ function Test() {
         }
     }
     return (
-        <div id='appBody'>
+        <div id='testBody'>
             <h1>Tale Maker</h1>
             <label htmlFor='outputtedStoryBox' id='outputtedStoryBoxLabel'>Generated story:</label>
             <textarea id='outputtedStoryBox' rows={10} cols={60} ref={outputtedStoryBoxRef} name='outputtedStoryBox' placeholder='Once upon a time...' readOnly></textarea>

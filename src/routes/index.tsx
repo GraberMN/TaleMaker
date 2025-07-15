@@ -1,5 +1,4 @@
 import { createFileRoute } from '@tanstack/react-router';
-import { useRef } from 'react';
 import '../components/indexRoute.css';
 
 export const Route = createFileRoute('/')({

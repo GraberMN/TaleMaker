@@ -1,9 +1,14 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router';
+import '../../components/settingRoute.css';
 
 export const Route = createFileRoute('/generate-your-tale/setting')({
-  component: RouteComponent,
+  component: Setting,
 })
 
-function RouteComponent() {
-  return <div>Hello "/generate-your-tale/setting"!</div>
+function Setting() {
+  return (
+    <div id='settingBody'>
+      Hello "/generate-your-tale/setting"!
+    </div>
+  )
 }

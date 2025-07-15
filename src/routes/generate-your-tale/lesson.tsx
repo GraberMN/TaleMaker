@@ -1,9 +1,14 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute } from '@tanstack/react-router';
+import '../../components/lessonRoute.css';
 
 export const Route = createFileRoute('/generate-your-tale/lesson')({
-  component: RouteComponent,
+  component: Lesson,
 })
 
-function RouteComponent() {
-  return <div>Hello "/generate-your-tale/lesson"!</div>
+function Lesson() {
+  return (
+    <div id='lessonBody'>
+      Hello "/generate-your-tale/lesson"!
+    </div>
+  )
 }

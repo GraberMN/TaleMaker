@@ -2,14 +2,15 @@
     text-align: center;
     background-color: lightgrey;
     margin: auto;
-    min-height: 900px;
+    min-height: 946px;
     min-width: 800px;
+    padding-top: 50px;
 }
 #hook {
     position: relative;
     font-family: cursive;
     font-size: 50px;
-    padding-top: 100px;
+    padding-top: 50px;
     max-width: 1300px;
     margin: auto;
 }
