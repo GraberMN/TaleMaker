@@ -19,6 +19,7 @@
     flex-direction: row;
     justify-content: center;
     margin-top: 10px;
+    margin-bottom: 30px;
 }
 .genreExampleImage {
     width: 200px;
@@ -31,4 +32,72 @@
 .genreExampleCaption {
     font-weight: bold;
     font-size: 20px;
+}
+.generateYourTaleButton {
+    border: solid;
+    border-radius: 10px;
+    padding: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: aqua;
+}
+.generateYourTaleButton:hover {
+    background-color:lightskyblue;
+}
+#hookPt2 {
+    position: relative;
+    font-family: cursive;
+    font-size: 50px;
+    padding-top: 50px;
+    max-width: 1300px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+#step1Title {
+    position: relative;
+    width: 350px;
+    font-family: cursive;
+    font-size: 30px;
+    color: green;
+    max-width: 1300px;
+    margin: auto;
+    border: solid;
+    margin-bottom: 30px;
+}
+#step1Image {
+    width: 700px;
+    height: 500px;
+    margin: auto;
+    border: solid;
+    background-color: white;
+    margin-bottom: 15px;
+}
+.stepCaption {
+    font-weight: bold;
+    font-size: 20px;
+}
+#step2Container {
+    margin-bottom: 30px;
+}
+#step2Title {
+    position: relative;
+    width: 525px;
+    font-family: cursive;
+    font-size: 30px;
+    color: green;
+    max-width: 1300px;
+    margin: auto;
+    border: solid;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#step2Image {
+    width: 700px;
+    height: 500px;
+    margin: auto;
+    border: solid;
+    background-color: white;
+    margin-bottom: 15px;
 }
