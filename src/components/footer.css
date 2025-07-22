@@ -1,0 +1,133 @@
+#footerFooter {
+    height: 450px;
+    background-color: white;
+}
+#footerInfoContainer {
+    margin: auto;
+    width: 750px;
+    height: 450px;
+    display: flex;
+    flex-direction: row;
+}
+#footerSection1 {
+    width: 375px;
+    padding-left: 20px;
+}
+#footerLogo {
+    margin-top: 30px;
+}
+#footerWebsiteName {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 25px;
+}
+#footerContactTitle {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-family: cursive;
+}
+#footerContactName {
+    resize: none;
+    display: block;
+    margin: auto;
+    border: solid;
+    margin-bottom: 10px;
+    background-color: mintcream;
+}
+#footerContactEmail {
+    resize: none;
+    display: block;
+    margin: auto;
+    border: solid;
+    margin-bottom: 10px;
+    background-color: mintcream;
+}
+#footerContactMessage {
+    resize: none;
+    display: block;
+    margin: auto;
+    border: solid;
+    margin-bottom: 10px;
+    background-color: mintcream;
+}
+#footerContactSubmit {
+    display: block;
+    margin: auto;
+    border: solid;
+    padding-left: 7px;
+    padding-right: 7px;
+    background-color: mintcream;
+    font-weight: bold;
+    cursor: pointer;
+}
+#footerContactSubmit:hover {
+    background-color: white;
+}
+#footerSection2 {
+    width: 375px;
+    display: grid;
+    grid-template-columns: 187.5px 157.5px;
+    grid-template-rows: 450px;
+    padding-left: 50px;
+    padding-top: 28px;
+}
+#footerLinksTitle {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#footerLinks1 {
+    width: 42px;
+    display: block;
+    margin-bottom: 10px;
+}
+#footerLinks2 {
+    width: 132px;
+    display: block;
+    margin-bottom: 10px;
+}
+#footerLinks3 {
+    width: 66px;
+    display: block;
+    margin-bottom: 10px;
+}
+#footerFollowTitle {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#footerFollow1 {
+    width: 70px;
+    display: block;
+    margin-bottom: 10px;
+}
+#footerFollow2 {
+    width: 61px;
+    display: block;
+    margin-bottom: 10px;
+}
+#footerFollow3 {
+    width: 59px;
+    display: block;
+    margin-bottom: 10px;
+}
+#footerFollow4 {
+    width: 63px;
+    display: block;
+    margin-bottom: 10px;
+}
+#footerFollow5 {
+    width: 68px;
+    display: block;
+    margin-bottom: 10px;
+}
+.footerLinkOrFollow:hover {
+    text-decoration: underline;
+}
+.footerLinkOrFollow:not(:hover) {
+    text-decoration: none;
+}
